@@ -3,6 +3,7 @@ abstract class AppStrings {
   static const firstAction = 'First Action';
   static const secondAction = 'Second Action';
   static const cancel = 'Cancel';
+  static const unlike = 'Swipe right to unlike';
 }
 
 

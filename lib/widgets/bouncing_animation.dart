@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HeartAnimation extends StatefulWidget {
+class BouncingAnimation extends StatefulWidget {
   final Widget child;
   final bool isAnimated;
   final Duration duration;
   final VoidCallback? onEnd;
 
-  HeartAnimation(
+  const BouncingAnimation(
       {Key? key,
       required this.child,
       required this.isAnimated,
@@ -15,10 +15,10 @@ class HeartAnimation extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<HeartAnimation> createState() => _HeartAnimationState();
+  State<BouncingAnimation> createState() => _BouncingAnimationState();
 }
 
-class _HeartAnimationState extends State<HeartAnimation>
+class _BouncingAnimationState extends State<BouncingAnimation>
     with TickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> scale;
@@ -33,7 +33,7 @@ class _HeartAnimationState extends State<HeartAnimation>
   }
 
   @override
-  void didUpdateWidget(HeartAnimation oldWidget) {
+  void didUpdateWidget(BouncingAnimation oldWidget) {
     if (widget.isAnimated != oldWidget.isAnimated) {
       startAnimation();
     }

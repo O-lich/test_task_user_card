@@ -20,4 +20,13 @@ final List<String> profileImages = [
   static const letterLogo = 'assets/logos/letter_logo.png';
   static const emojiLogo = 'assets/logos/emoji_logo.png';
   static const outboxLogo = 'assets/logos/outbox_logo.png';
+  static const playerPauseLogo = 'assets/logos/player_pause_logo.png';
 }
+
+List <String> favoriteLogos = [
+'assets/logos/beer_logo.png',
+ 'assets/logos/dog_logo.png',
+ 'assets/logos/burger_logo.png',
+ 'assets/logos/headphones_logo.png',
+ 'assets/logos/gamepad_logo.png'
+];

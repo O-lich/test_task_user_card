@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'custom_box_decoration.dart';
 
 class CustomContainer {
-  static GestureDetector customBottomContainerButton(
-      BuildContext context, String image,  void Function()? onTap, Color color,) {
+  static GestureDetector customBottomContainerButton(BuildContext context,
+      String image, void Function()? onTap, Color color, double width) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: CustomBoxDecoration.boxDecoration(context, color),
+        decoration: CustomBoxDecoration.boxDecoration(context, color, width),
         child: Padding(
           padding: const EdgeInsets.all(7.0),
           child: Image.asset(
@@ -22,8 +20,11 @@ class CustomContainer {
   }
 
   static GestureDetector customRightContainerButton(
-      String image) {
+    String image,
+    void Function()? onTap,
+  ) {
     return GestureDetector(
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
