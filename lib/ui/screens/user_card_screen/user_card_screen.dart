@@ -59,7 +59,7 @@ class _UserCardScreenState extends State<UserCardScreen> {
         onPageChanged: (index) {
           controller.animateToPage(index,
               duration: const Duration(milliseconds: 1000),
-              curve: Curves.bounceOut);
+              curve: Curves.linear);
         },
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
@@ -201,8 +201,8 @@ class _UserCardScreenState extends State<UserCardScreen> {
                           children: [
                             AudioWidget(audioPlayer: audioPlayer),
                             Container(
-                              width: (width / 9) * favoriteLogos.length,
-                              height: 50,
+                              width: (width / 1.5),
+                              height: 60,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                                 borderRadius:
@@ -227,18 +227,19 @@ class _UserCardScreenState extends State<UserCardScreen> {
                                                 bool value, Widget? child) {
                                               return CustomContainer
                                                   .customBottomContainerButton(
-                                                      context,
-                                                      favoriteLogos[index], () {
-                                                isClicked.value =
-                                                    !isClicked.value;
-                                                selectedIndex = index;
-                                              },
-                                                      selectedIndex == index
+                                                      context: context,
+                                                      image:
+                                                          favoriteLogos[index],
+                                                      color: selectedIndex ==
+                                                              index
                                                           ? activeIconColor
                                                           : inactiveIconColor,
-                                                      selectedIndex == index
-                                                          ? 2.5
-                                                          : 1);
+                                                      borderWidth:
+                                                          selectedIndex == index
+                                                              ? 2.5
+                                                              : 1,
+                                                      width: width / 9,
+                                                      height: width / 9);
                                             },
                                           );
                                         },

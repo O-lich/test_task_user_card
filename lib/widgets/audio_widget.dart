@@ -63,7 +63,7 @@ class _AudioWidgetState extends State<AudioWidget> {
           padding: const EdgeInsets.all(5),
           child: Image.asset(
             isPlaying == false ? icons[0] : icons[1],
-            scale: 4,
+            scale: 3,
           ),
         ),
       ),

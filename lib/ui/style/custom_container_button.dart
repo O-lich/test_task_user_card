@@ -2,17 +2,26 @@ import 'package:flutter/material.dart';
 import 'custom_box_decoration.dart';
 
 class CustomContainer {
-  static GestureDetector customBottomContainerButton(BuildContext context,
-      String image, void Function()? onTap, Color color, double width) {
+  static GestureDetector customBottomContainerButton(
+      {required BuildContext context,
+      required String image,
+      void Function()? onTap,
+      required Color color,
+      required double borderWidth,
+      required double width,
+      required double height
+
+      }) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: CustomBoxDecoration.boxDecoration(context, color, width),
+        width: width,
+        height: height,
+        decoration: CustomBoxDecoration.boxDecoration(context, color, borderWidth),
         child: Padding(
           padding: const EdgeInsets.all(7.0),
           child: Image.asset(
             image,
-            scale: 3,
           ),
         ),
       ),

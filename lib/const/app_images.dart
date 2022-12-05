@@ -28,5 +28,5 @@ List <String> favoriteLogos = [
  'assets/logos/dog_logo.png',
  'assets/logos/burger_logo.png',
  'assets/logos/headphones_logo.png',
- 'assets/logos/gamepad_logo.png'
+ 'assets/logos/gamepad_logo.png',
 ];
